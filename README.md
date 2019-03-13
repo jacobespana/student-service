@@ -80,6 +80,8 @@ Add a request body in JSON format (do not include id param as that is auto gener
 
 This should return an empty HTTP response
 
+![My image](https://github.com/jacobespana/images/blob/master/img/students_POST.png)
+
 #### Read a Student Entity
 
 In Postman, enter the correct URL and HTTP Request method
@@ -102,6 +104,7 @@ This should return an HTTP response of (will vary depending on id value in URI)
     }
 ] 
 ```
+![My image](https://github.com/jacobespana/images/blob/master/img/students_id_GET.png)
 
 #### Read All Student Entities
 
@@ -139,6 +142,7 @@ This should return an HTTP response of (will vary depending on id value in URI)
     }
 ]
 ```
+![My image](https://github.com/jacobespana/images/blob/master/img/students_GET.png)
 
 #### Update a Student Entity
 
@@ -161,6 +165,8 @@ Add a request body in JSON format
 ```
 
 This should return an empty HTTP response
+
+![My image](https://github.com/jacobespana/images/blob/master/img/students_PUT.png)
 
 #### Delete a Student Entity
 
