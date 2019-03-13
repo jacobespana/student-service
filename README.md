@@ -58,13 +58,128 @@ Step 10: Run application as a Spring Boot App.
 
 ### Testing
 
-#### TESTTT
+#### Create a Student Entity
+
+In Postman, enter the correct URL and HTTP Request method
+
+```
+http://localhost:8080/students
+Request Method - POST
+```
+
+Add a request body in JSON format (do not include id param as that is auto generated)
+
+```
+{
+	"firstName": "Aaron", 
+	"lastName": "Rodgers", 
+	"major": "Football", 
+	"dob": "11/09/1992"
+}
+```
+
+This should return an empty HTTP response
+
+#### Read a Student Entity
+
+In Postman, enter the correct URL and HTTP Request method
+
+```
+http://localhost:8080/students/{id}
+Request Method - GET
+```
+
+This should return an HTTP response of (will vary depending on id value in URI)
+
+```
+[
+    {
+        "id": 10001,
+        "firstName": "Jacob",
+        "lastName": "Espana",
+        "major": "Computer Science",
+        "dob": "07/28/1991"
+    }
+] 
+```
+
+#### Read All Student Entities
+
+In Postman, enter the correct URL and HTTP Request method
+
+```
+http://localhost:8080/students
+Request Method - GET
+```
+
+This should return an HTTP response of (will vary depending on id value in URI)
+
+```
+[
+    {
+        "id": 10001,
+        "firstName": "Jacob",
+        "lastName": "Espana",
+        "major": "Computer Science",
+        "dob": "07/28/1991"
+    },
+    {
+        "id": 10002,
+        "firstName": "John",
+        "lastName": "Smith",
+        "major": "Environmental Science",
+        "dob": "09/14/1978"
+    },
+    {
+        "id": 10003,
+        "firstName": "Aaron",
+        "lastName": "Rodgers",
+        "major": "Football",
+        "dob": "11/09/1992"
+    }
+]
+```
+
+#### Update a Student Entity
+
+In Postman, enter the correct URL and HTTP Request method
+
+```
+http://localhost:8080/students/{id}
+Request Method - PUT
+```
+
+Add a request body in JSON format 
+
+```
+{
+	"firstName": "Kenny", 
+	"lastName": "Clark", 
+	"major": "Defense", 
+	"dob": "10/19/1993"
+}
+```
+
+This should return an empty HTTP response
+
+#### Delete a Student Entity
+
+In Postman, enter the correct URL and HTTP Request method
+
+```
+http://localhost:8080/students/{id}
+Request Method - DELETE
+```
+
+This should return an empty HTTP response
+
+![My image](https://github.com/jacobespana/images/blob/master/img/students_DELETE.png)
 
 ## Built With
 
 * [STS](http://www.dropwizard.io/1.0.2/docs/) - The IDE used
 * [Maven](https://maven.apache.org/) - Dependency Management
-* [Postman] (https://www.getpostman.com/) - API Development Testing
+* [Postman](https://www.getpostman.com/) - API Development Testing
 
 ## Authors
 
