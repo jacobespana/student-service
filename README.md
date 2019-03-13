@@ -1,6 +1,6 @@
-# Project Title
+# Student Service	
 
-One Paragraph of project description goes here
+This project creates a CRUD REST API/Service that allows the user to create, read, update and destroy Student entities in an in-memory H2 database.
 
 ## Getting Started
 
@@ -8,73 +8,67 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to install and test the software and how to install them
 
 ```
-Give examples
+Maven 3.0+ - Build Tool
+IDE of your choice (STS was used)
+JDK 1.8+
+Postman 7.0+ - API Development Testing
 ```
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+Step 1: Create a new Maven Project with the following properties
 
 ```
-Give the example
+Group Id: com.studentmicroservice
+Artifact Id: StudentService
 ```
 
-And repeat
+Step 2: Unzip project into directory of your choosing 
+
+Step 3: In IDE of your choice, open the project and modify the pom.xml to reflect the pom.xml contained in this repo.
+
+Step 4: In src/main/resources, create a data.sql file and modify to contain seed data as below
 
 ```
-until finished
+insert into student
+values(10001, '07/28/1991', 'Jacob', 'Espana', 'Computer Science');
+
+insert into student
+values(10002, '09/14/1978', 'John', 'Smith', 'Environmental Science');
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Step 5: In src/main/java/com/studentmicroservice/StudentService, create a directory named 'student'.
 
-## Running the tests
+* *Feel free to place Application main in student directory as well*
 
-Explain how to run the automated tests for this system
+Step 6: In 'student' directory, create Student.java entity class to reflect the Student.java class contained in this repo.
 
-### Break down into end to end tests
+Step 7: In 'student' directory, create StudentController.java class to reflect the StudentController.java class contained in this repo.
 
-Explain what these tests test and why
+Step 8: In 'student' directory, create StudentRepository.java interface to reflect the StudentRepository.java interface contained in this repo.
 
-```
-Give an example
-```
+Step 9: In 'student' directory, create StudentService.java class to reflect the StudentService.java class contained in this repo.
 
-### And coding style tests
+Step 10: Run application as a Spring Boot App.
 
-Explain what these tests test and why
+### Testing
 
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+#### TESTTT
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [STS](http://www.dropwizard.io/1.0.2/docs/) - The IDE used
 * [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [Postman] (https://www.getpostman.com/) - API Development Testing
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Jacob Espana** - *Initial work* - [GitHub](https://github.com/jacobespana)
 
 ## License
 
@@ -82,8 +76,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thanks to in28minutes for inspiration and reference code.
 
 
